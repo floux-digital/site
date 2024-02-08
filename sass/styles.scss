@@ -1,0 +1,94 @@
+// TO COMPILE:
+// $ sass --watch sass/styles.scss:main.css --style compressed
+// $ sass --watch sass/style.scss:main.css --watch main.css:main.min.css --style compressed
+
+// REQUIRED
+@import "../node_modules/bootstrap/scss/functions";
+
+// OVERRIDING VARIABLES
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+// Typography
+$font-family-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base: $font-family-sans-serif !default;
+
+
+
+// Colors
+
+$blue: #01B0F1;
+$indigo: $blue;
+$purple: $blue;
+$red: #FF5858;
+$pink: $red;
+$orange: #FF7F0A;
+$yellow: #FDF996;
+$green: #59BC6E;
+$teal: #01B0F1;
+$cyan: $blue;
+$black: #000;
+$white: #FFF;
+$gray-600: #727272;
+$gray-800: #202124;
+
+$custom-colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+
+$primary: $black;
+$secondary: $gray-600;
+$success: $green;
+$info: $blue;
+$warning: $orange;
+$danger: $red;
+$light: #FAF9F0;
+$dark: $gray-800;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+
+// // BOOTSTRAP DEFAULTS
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/variables-dark";
+// @import "../node_modules/bootstrap/scss/maps";
+
+
+// @import "../node_modules/bootstrap/scss/mixins";
+// @import "../node_modules/bootstrap/scss/root";
+
+// @import "../node_modules/bootstrap/scss/utilities";
+// @import "../node_modules/bootstrap/scss/reboot";
+
+// @import "../node_modules/bootstrap/scss/type";
+// @import "../node_modules/bootstrap/scss/images";
+// @import "../node_modules/bootstrap/scss/containers";
+// @import "../node_modules/bootstrap/scss/grid";
+// @import "../node_modules/bootstrap/scss/helpers";
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// CUSTOM
+@import "./custom.scss";
+

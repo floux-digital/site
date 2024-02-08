@@ -1,0 +1,578 @@
+// TO COMPILE:
+// $ sass --watch sass/styles.scss main.css
+html{
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body{
+  background: $white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size:16px;
+  transition: all 0.5s ease;
+}
+
+/* Style rules for dark mode */
+
+body.dark {
+  background-color: rgb(30, 30, 30);
+  color: #d6d6d6;
+  .accordion{
+    --bs-accordion-bg: rgb(30, 30, 30);
+    --bs-accordion-color: #d6d6d6;
+  }
+  .accordion-button{
+    &:focus{
+      box-shadow: none;
+      border-color: rgb(85, 85, 85);
+    }
+    &:not(.colapsed){
+      background-color: rgb(30, 30, 30);
+      color: #d6d6d6;
+      box-shadow: none;
+      &:after{
+        filter: invert(88%);
+      }
+    }
+  }
+  svg{
+    filter: invert(88%);
+  }
+  img{
+    filter: invert(88%);
+  }
+  .btn{
+    &:hover{
+      background-color:rgb(22, 22, 22);
+    }
+  }
+  .link{
+    color: #d6d6d6;
+    &:hover{
+      color: rgb(85,85,85);
+    }
+    &.active{
+      color: rgb(85,85,85);
+    }
+  }
+  .form-text{
+    color: rgb(85,85,85);
+  }
+}
+
+
+
+h1{
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  @include media-breakpoint-up(xl) {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  &.large{
+    font-weight: 300;
+    font-size: 1.75em;
+    line-height: 1.5em;
+    @include media-breakpoint-up(xl) {
+      font-size: 2.5em;
+      line-height: 1.5em;
+    }  
+  }
+}
+
+h2{
+  font-weight: 300;
+  font-size: 1.75em;
+  line-height: 1.5em;
+  @include media-breakpoint-up(xl) {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+}
+
+h5{
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.125em;
+  @include media-breakpoint-up(xl) {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+p{
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 2em;
+  @include media-breakpoint-up(xl) {
+    font-size: 1.125em;
+    line-height: 1.85em;
+  }
+}
+
+.link{
+  font-weight: 600;
+  font-size: 1.125em;
+  text-decoration: none;
+  display: block;
+  padding: 1em 0;
+  transition: all 0.2s;
+  &:hover{
+    color: $gray-600;
+  }
+}
+
+.dragImage{
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 80px;
+  @include media-breakpoint-up(md) {
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+.accordion-button{
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  padding: 1em 0;
+  &:focus{
+    box-shadow: none;
+    border-color: $white;
+  }
+  &:not(.colapsed){
+    background-color: $white;
+    color: #000;
+    box-shadow: none;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 2.5rem;
+    line-height: 1.875rem;
+  }
+}
+
+.accordion-body{
+  padding: 2em 0;
+}
+
+.form-label{
+  font-size: 0.875em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+}
+
+.form-text{
+  color: $light;
+}
+
+.form-control{
+  padding: 1rem 0.75em;
+  border: 1px solid $gray-600;
+  border-radius: 0.25em;
+}
+
+.invalid-feedback{
+  color: $warning !important;
+}
+
+.btn{
+  padding: 1em 2em;
+}
+
+.modal{
+  .modal-header{
+    padding: 1.5em;
+    border-bottom: none;
+  }
+  .modal-body{
+    padding: 1.5em;
+  }
+  .modal-footer{
+    border-top: none;
+    padding: 0 1.5em 1.5em;
+  }
+}
+
+
+.spacing{
+  display: block;
+  height: 80px;
+  width: 100%;
+}
+
+.spacingDouble{
+  display: block;
+  height: 160px;
+  width: 100%;
+}
+
+
+#header{
+  max-width: 880px;
+  padding: 20px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(xl) {
+    padding: 80px 20px;
+  }
+  .brand{
+    width: 140px;
+    height: auto;
+  }
+}
+
+.single{
+  max-width: 880px;
+  padding: 0 20px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(xl) {
+    padding: 0px 20px 20px;
+  }
+  .brand{
+    width: 60%;
+    height: auto;
+  }
+  section{
+    width: 100%;
+    margin: 80px 0;
+  }
+}
+
+.main{
+  max-width: 880px;
+  padding: 60px 20px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(xl) {
+    padding: 200px 20px 20px;
+  }
+  .brand, .brandContainer{
+    width: 60%;
+    height: auto;
+    svg{
+      width: 100%;
+      height: auto;
+    }
+  }
+  section{
+    width: 100%;
+    margin: 80px 0;
+    @include media-breakpoint-up(lg) {
+      margin: 160px 0;
+    }
+  }
+}
+
+
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2em;
+  img{
+    width: 60px;
+    height: auto;
+  }
+}
+
+.customers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .customer{
+    border: 1px solid #ACACAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      height: 200px;
+    }
+    img{
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+    }
+  }
+}
+
+
+/***************************************************
+ * Generated by SVG Artista on 11/7/2023, 9:13:10 PM
+ * MIT license (https://opensource.org/licenses/MIT)
+ * W. https://svgartista.net
+ **************************************************/
+
+ @-webkit-keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 601.8882446289062px;
+    stroke-dasharray: 601.8882446289062px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 601.8882446289062px;
+  }
+}
+
+@keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 601.8882446289062px;
+    stroke-dasharray: 601.8882446289062px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 601.8882446289062px;
+  }
+}
+
+@-webkit-keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+@keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+.svg-elem-1 {
+  -webkit-animation: animate-svg-stroke-1 1s linear 0s both, animate-svg-fill-1 0.2s linear 0.8s both;
+          animation: animate-svg-stroke-1 1s linear 0s both, animate-svg-fill-1 0.2s linear 0.8s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 404.2042541503906px;
+    stroke-dasharray: 404.2042541503906px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 404.2042541503906px;
+  }
+}
+
+@keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 404.2042541503906px;
+    stroke-dasharray: 404.2042541503906px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 404.2042541503906px;
+  }
+}
+
+@-webkit-keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+@keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+.svg-elem-2 {
+  -webkit-animation: animate-svg-stroke-2 1s linear 0.12s both,
+                       animate-svg-fill-2 0.2s linear 0.9s both;
+          animation: animate-svg-stroke-2 1s linear 0.12s both,
+               animate-svg-fill-2 0.2s linear 0.9s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-3 {
+  0% {
+    stroke-dashoffset: 574.5940551757812px;
+    stroke-dasharray: 574.5940551757812px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 574.5940551757812px;
+  }
+}
+
+@keyframes animate-svg-stroke-3 {
+  0% {
+    stroke-dashoffset: 574.5940551757812px;
+    stroke-dasharray: 574.5940551757812px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 574.5940551757812px;
+  }
+}
+
+@-webkit-keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+@keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+.svg-elem-3 {
+  -webkit-animation: animate-svg-stroke-3 1s linear 0.24s both,
+                       animate-svg-fill-3 0.2s linear 1s both;
+          animation: animate-svg-stroke-3 1s linear 0.24s both,
+               animate-svg-fill-3 0.2s linear 1s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-4 {
+  0% {
+    stroke-dashoffset: 638.1866455078125px;
+    stroke-dasharray: 638.1866455078125px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 638.1866455078125px;
+  }
+}
+
+@keyframes animate-svg-stroke-4 {
+  0% {
+    stroke-dashoffset: 638.1866455078125px;
+    stroke-dasharray: 638.1866455078125px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 638.1866455078125px;
+  }
+}
+
+@-webkit-keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+@keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+.svg-elem-4 {
+  -webkit-animation: animate-svg-stroke-4 1s linear 0.36s both,
+                       animate-svg-fill-4 0.2s linear 1.1s both;
+          animation: animate-svg-stroke-4 1s linear 0.36s both,
+               animate-svg-fill-4 0.2s linear 1.1s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-5 {
+  0% {
+    stroke-dashoffset: 629.6537475585938px;
+    stroke-dasharray: 629.6537475585938px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 629.6537475585938px;
+  }
+}
+
+@keyframes animate-svg-stroke-5 {
+  0% {
+    stroke-dashoffset: 629.6537475585938px;
+    stroke-dasharray: 629.6537475585938px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 629.6537475585938px;
+  }
+}
+
+@-webkit-keyframes animate-svg-fill-5 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+@keyframes animate-svg-fill-5 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+.svg-elem-5 {
+  -webkit-animation: animate-svg-stroke-5 1s linear 0.48s both,
+                       animate-svg-fill-5 0.2s linear 1.2000000000000002s both;
+          animation: animate-svg-stroke-5 1s linear 0.48s both,
+               animate-svg-fill-5 0.2s linear 1.2000000000000002s both;
+}
