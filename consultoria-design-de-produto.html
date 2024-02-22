@@ -30,12 +30,13 @@
 		<meta property="og:site_name" content="floux.digital" />
 
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-T21R2VYS7K"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SJRKKP8YTR"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
-			gtag('config', 'G-T21R2VYS7K');
+
+			gtag('config', 'G-SJRKKP8YTR');
 		</script>
 		
 		<!-- styles -->
@@ -202,101 +203,54 @@
 		<section>
 			<h5 class="mb-4">Contato</h5>
 			<h2 class="mb-4">Vamos Conversar</h2>
-			<p>Você não será atendido por alguém comercial, mas por um Designer Especialista que vai nesse primeiro papo, procurar entender de fato o seu problema.</p>
-			
+			<p>Você não será atendido por alguém comercial, mas por um Designer Especialista que vai nesse primeiro papo, procurar
+				entender de fato o seu problema.</p>
+		
 			<div class="spacing"></div>
-			
-			<form id="sendcontact" class="mb-5">
-				<div class="mb-3">
-					<label for="name" class="form-label">Nome</label>
-					<input type="text" class="form-control" id="name" inputmode="text" aria-describedby="nameHelp">
-					<div id="nameHelp" class="form-text">Pelo menos 3 caracteres</div>
-				</div>
-				<div class="mb-3">
-					<label for="email" class="form-label">E-mail</label>
-					<input type="text" class="form-control" id="email" inputmode="email" aria-describedby="emailHelp">
-					<div id="emailHelp" class="form-text">Informe um e-mail válido</div>
-				</div>
-				<div class="mb-3">
-					<label for="phone" class="form-label">Telefone / Whatsapp</label>
-					<input type="text" class="form-control" id="phone" inputmode="tel" aria-describedby="phoneHelp">
-					<div id="phoneHelp" class="form-text">Informe um telefone válido</div>
-				</div>
-				<div class="d-grid gap-2 d-block mb-5 mt-5">
-					<button id="submitBtn" type="submit" class="btn btn-primary">Quero receber o Contato</button>
-				</div>
-			</form>
-
+		
+			<div id="sendcontact" class="mb-5">
+				<div id='floux-form'></div>
+			</div>
+		
 		</section>
-
+		
 		<footer>
 			<img src="/images/floux.svg" alt="floux">
 			<span>© floux 2023</span>
 		</footer>
-
-	</div>
-
-	<!-- Modal -->
-	<div class="modal fade" id="successModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="successLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="successLabel">Sucesso</h5>
-				</div>
-				<div class="modal-body">
-					Seus dados foram recebidos com sucesso. Aguarde nosso contato.
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
-				</div>
-			</div>
 		</div>
-	</div>
-
-	<div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="errorLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="errorLabel">Erro</h5>
-				</div>
-				<div class="modal-body">
-					Desculpe. Não foi possível enviar seus dados agora. Tente novamente em alguns minutos.
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="/js/scripts.js"></script>
-
-	<!-- TYPEBOT-->
-	<script>
-		const typebotInitScript = document.createElement("script");
-		typebotInitScript.type = "module";
-		typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.31/dist/web.js'
-			Typebot.initBubble({
-				typebot: "floux-digital",
-				apiHost: "https://chat.floux.digital",
-				previewMessage: {
-					message: "Estamos online! :)",
-					avatarUrl: "https://floux.digital/favicons/apple-touch-icon.png",
-				},
-				theme: {
-					button: { backgroundColor: "#000000", iconColor: "#ffffff", size: "large" },
-					previewMessage: {
-						backgroundColor: "#e3e3e3",
-						textColor: "#000",
-						closeButtonBackgroundColor: "#000",
-						closeButtonIconColor: "#FFFFFF",
-					},
-				},
-			});
-		`;
-		document.body.append(typebotInitScript);
-	</script>
-	
-</body>    
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src='https://floux-crm.sfo3.digitaloceanspaces.com/widgets/floux-form-widget.min.js' data-floux-form='6'
+			data-floux-account='7ea9d551-5308-40f1-875f-1996fc10d695'></script>
+		<!-- <script src='/js/floux-form-widget.min.js' data-floux-form='6'
+								data-floux-account='7ea9d551-5308-40f1-875f-1996fc10d695'></script> -->
+		
+		<!-- TYPEBOT-->
+		<script>
+			const typebotInitScript = document.createElement("script");
+			typebotInitScript.type = "module";
+			typebotInitScript.innerHTML = `import Typebot from 'https://floux-crm.sfo3.digitaloceanspaces.com/widgets/floux-chat-widget.js'
+									Typebot.initBubble({
+										typebot: "floux-digital",
+										apiHost: "https://chat.floux.digital",
+										previewMessage: {
+											message: "Estamos online! :)",
+											autoShowDelay: 5000,
+											avatarUrl: "https://floux.digital/favicons/apple-touch-icon.png",
+										},
+										theme: {
+											button: { backgroundColor: "#000000", iconColor: "#ffffff", size: "large" },
+											previewMessage: {
+												backgroundColor: "#e3e3e3",
+												textColor: "#000",
+												closeButtonBackgroundColor: "#000",
+												closeButtonIconColor: "#FFFFFF",
+											},
+										},
+									});
+								`;
+			document.body.append(typebotInitScript);
+		</script>
+	</body>
 </html>
