@@ -288,6 +288,15 @@ footer{
   }
 }
 
+.company{
+  border-top: 1px solid #ACACAC;
+  color: #666;
+  margin-top: 2em;
+  padding-top: 2em;
+  text-align: center;
+  font-size: 0.75em;
+}
+
 .customers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
