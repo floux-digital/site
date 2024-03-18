@@ -17,53 +17,39 @@ body{
 
 /* Style rules for dark mode */
 
-body.dark {
-  background-color: rgb(30, 30, 30);
-  color: #d6d6d6;
-  .accordion{
-    --bs-accordion-bg: rgb(30, 30, 30);
-    --bs-accordion-color: #d6d6d6;
-  }
-  .accordion-button{
-    &:focus{
-      box-shadow: none;
-      border-color: rgb(85, 85, 85);
+body.cream {
+  background-color: $cream;
+  padding-top: 104px;
+  .navbar{
+    padding-top: 1em;
+    .container{
+      background-color: $white;
+      border-radius: 1em;
+      border: 2px solid $black;
     }
-    &:not(.colapsed){
-      background-color: rgb(30, 30, 30);
-      color: #d6d6d6;
-      box-shadow: none;
-      &:after{
-        filter: invert(88%);
+    .navbar-brand{
+      padding-top: 1em;
+      padding-bottom: 1.25em;
+      padding-left: 0.75em;
+      .brand{
+        max-height: 1em;
+        width: auto;
       }
     }
   }
-  svg{
-    filter: invert(88%);
-  }
-  img{
-    filter: invert(88%);
-  }
-  .btn{
-    &:hover{
-      background-color:rgb(22, 22, 22);
-    }
-  }
-  .link{
-    color: #d6d6d6;
-    &:hover{
-      color: rgb(85,85,85);
-    }
-    &.active{
-      color: rgb(85,85,85);
-    }
-  }
-  .form-text{
-    color: rgb(85,85,85);
+  section{
+    padding-top: 10em;
+    padding-bottom: 10em;
   }
 }
 
-
+.bg-cream {
+  background-color: $cream;
+}
+.bg-contrast{
+  background-color: $contrast;
+  color: $white;
+}
 
 h1{
   font-weight: 300;

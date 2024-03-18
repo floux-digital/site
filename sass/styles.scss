@@ -30,6 +30,8 @@ $black: #000;
 $white: #FFF;
 $gray-600: #727272;
 $gray-800: #202124;
+$cream: #ffdfbc;
+$contrast: #18222f;
 
 $custom-colors: (
   "blue":       $blue,
@@ -45,7 +47,9 @@ $custom-colors: (
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "cream":      $cream,
+  "contrast":   $contrast
 );
 
 $primary: $black;

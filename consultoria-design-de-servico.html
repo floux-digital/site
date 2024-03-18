@@ -190,30 +190,31 @@
 		<!-- <script src='/js/floux-form-widget.min.js' data-floux-form='6'
 						data-floux-account='7ea9d551-5308-40f1-875f-1996fc10d695'></script> -->
 		
-		<!-- TYPEBOT-->
 		<script>
+			// floux CRM AI Chat
+			// https://crm.floux.digital
 			const typebotInitScript = document.createElement("script");
 			typebotInitScript.type = "module";
 			typebotInitScript.innerHTML = `import Typebot from 'https://floux-crm.sfo3.digitaloceanspaces.com/widgets/floux-chat-widget.js'
-							Typebot.initBubble({
-								typebot: "floux-digital",
-								apiHost: "https://chat.floux.digital",
-								previewMessage: {
-									message: "Estamos online! :)",
-									autoShowDelay: 5000,
-									avatarUrl: "https://floux.digital/favicons/apple-touch-icon.png",
-								},
-								theme: {
-									button: { backgroundColor: "#000000", iconColor: "#ffffff", size: "large" },
-									previewMessage: {
-										backgroundColor: "#e3e3e3",
-										textColor: "#000",
-										closeButtonBackgroundColor: "#000",
-										closeButtonIconColor: "#FFFFFF",
-									},
-								},
-							});
-						`;
+					Typebot.initBubble({
+						typebot: "floux-site",
+						apiHost: "https://chat.floux.digital",
+						previewMessage : {
+							message: "Tenho uma pergunta!",
+							autoShowDelay: 2000,
+							avatarUrl: "https://crm.floux.digital/asset/828c06f3-0948-4a03-b899-42177f32756e.png",
+						},
+						theme: {
+							button: { backgroundColor: "#000000", iconColor: "#FFFFFF", size: "large" },
+							previewMessage: {
+								backgroundColor: "#FFFFFF",
+								textColor: "#000000",
+								closeButtonBackgroundColor: "#000000",
+								closeButtonIconColor: "#FFFFFF",
+							},
+						},
+					});
+				`;
 			document.body.append(typebotInitScript);
 		</script>
 	</body>
