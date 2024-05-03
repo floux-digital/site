@@ -68,6 +68,10 @@ body.cream {
   section{
     padding-top: 5em;
     padding-bottom: 5em;
+    @include media-breakpoint-down(sm) {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
   }
   .chats{
     width: 100%;
@@ -88,6 +92,9 @@ body.cream {
       right: 0;
       bottom: 10px;
       z-index: 0;
+      @include media-breakpoint-down(sm) {
+        max-height: 160px;
+      }
     }
   }
   .tasks{
