@@ -20,16 +20,44 @@ body{
 body.cream {
   background-color: $cream;
   padding-top: 104px;
+  h1, h2, h3, h4, h5{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  h1{
+    line-height: 1.1;
+  }
+  h2{
+    font-size: 44px;
+  }
+  p{
+    font-size: 1em;
+    font-weight: 400;
+    &.lg{
+      font-size: 1.125em;
+    }
+    &.small{
+      font-size: 0.825em;
+    }
+  }
+  .highlight{
+    background: linear-gradient(120deg, $gold 0%, $gold 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    background-position: 0 60%;
+  }
   .navbar{
     padding-top: 1em;
+    margin: 0 0.725em;
     .container{
       background-color: $white;
       border-radius: 1em;
       border: 2px solid $black;
     }
     .navbar-brand{
-      padding-top: 1em;
-      padding-bottom: 1.25em;
+      padding-top: 0.75em;
+      padding-bottom: 1em;
       padding-left: 0.75em;
       .brand{
         max-height: 1em;
@@ -38,8 +66,141 @@ body.cream {
     }
   }
   section{
-    padding-top: 10em;
-    padding-bottom: 10em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+  .chats{
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    position: relative;
+    .img-chat{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      @include media-breakpoint-down(lg) {
+        max-height: 400px;
+      }
+    }
+    .img-form{
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      z-index: 0;
+    }
+  }
+  .tasks{
+    width: 100%;
+    height: 100%;
+    min-height: 470px;
+    position: relative;
+    .img-tasks{
+      position: absolute;
+      right: 0;
+      top: 10px;
+      z-index: 0;
+    }
+    .img-worker{
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      z-index: 1;
+    }
+  }
+  .charts{
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    position: relative;
+    .img-charts{
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      z-index: 0;
+    }
+    .img-chart{
+      position: absolute;
+      right: 0;
+      top: 10px;
+      z-index: 1;
+    }
+  }
+  .bg-contrast{
+    background-color: #363636;
+  }
+  .quote-section{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding-top: 7.5em;
+    padding-bottom: 7.5em;
+  }
+  .accordion{
+    border-color: $black;
+    border: 1px solid $black;
+    border-radius: 24px;
+    background-color: $white;
+    .accordion-item{
+      background-color: transparent;
+      &:first-of-type{
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+      }
+      &:last-of-type{
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+      }
+      .accordion-button{
+        background-color: transparent;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 1em;
+        &:focus{
+          box-shadow: none;
+          border-color: $white;
+        }
+        &:not(.colapsed){
+          color: #000;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .accordion-body{
+    padding: 2em 1em;
+  }
+
+  .range{
+    width: 100%;
+    padding: 1.5em 0;
+    label{
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  .price{
+    width: 100%;
+    text-align: center;
+    span{
+      font-family: "DM Serif Display", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 3em;
+    }
+  }
+
+  footer{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+    img{
+      width: 60px;
+      height: auto;
+    }
   }
 }
 

@@ -6,7 +6,12 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 // OVERRIDING VARIABLES
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
 
 // Typography
 $font-family-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -32,6 +37,7 @@ $gray-600: #727272;
 $gray-800: #202124;
 $cream: #ffdfbc;
 $contrast: #18222f;
+$gold: #ECAB16;
 
 $custom-colors: (
   "blue":       $blue,
@@ -49,7 +55,8 @@ $custom-colors: (
   "gray":       $gray-600,
   "gray-dark":  $gray-800,
   "cream":      $cream,
-  "contrast":   $contrast
+  "contrast":   $contrast,
+  "gold":       $gold
 );
 
 $primary: $black;
@@ -72,6 +79,23 @@ $theme-colors: (
   "dark":       $dark
 );
 
+// Range
+$form-range-track-width:          100%;
+$form-range-track-height:         .5rem;
+$form-range-track-cursor:         pointer;
+$form-range-track-bg:             $white;
+$form-range-track-border-radius:  1rem;
+
+$form-range-thumb-width:                   2rem;
+$form-range-thumb-height:                  2rem;
+$form-range-thumb-bg:                      $gold;
+$form-range-thumb-border:                  0;
+$form-range-thumb-border-radius:           2rem;
+$form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1);
+//$form-range-thumb-focus-box-shadow:        0 0 0 1px $body-bg, $input-focus-box-shadow;
+//$form-range-thumb-focus-box-shadow-width:  $input-focus-width; // For focus box shadow issue in Edge
+$form-range-thumb-active-bg:               $gold;
+$form-range-thumb-transition:              background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
 // // BOOTSTRAP DEFAULTS
 // @import "../node_modules/bootstrap/scss/variables";
