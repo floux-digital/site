@@ -303,9 +303,9 @@ p{
     border-color: $white;
   }
   &:not(.colapsed){
-    background-color: $white;
-    color: #000;
-    box-shadow: none;
+    background-color: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
   }
   @include media-breakpoint-up(xl) {
     font-size: 2.5rem;

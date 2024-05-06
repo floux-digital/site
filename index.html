@@ -69,14 +69,30 @@
 			<div class="accordion accordion-flush" id="servicesList">
 				<div class="accordion-item">
 					<h2 class="accordion-header">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#strategy" aria-expanded="true" aria-controls="strategy">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#applied-Ai" aria-expanded="true" aria-controls="applied-Ai">
+							iA Aplicada
+						</button>
+					</h2>
+					<div id="applied-Ai" class="accordion-collapse collapse show" data-bs-parent="#servicesList">
+						<div class="accordion-body">
+							<p>Estamos prontos ajudar na transformação do seu negócio criando um planejamento detalhado, engenharia de prompt e provas de conceito para integrá-lo com os principais recursos de Inteligência Artificial do mercado.</p> 
+							<a href="/inteligencia-artificial-aplicada.html" class="btn btn-sm btn-primary mb-3 mt-3" rel="tag">Saiba mais</a>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#strategy" aria-expanded="false" aria-controls="strategy">
 							Pesquisa e Estratégia
 						</button>
 					</h2>
-					<div id="strategy" class="accordion-collapse collapse show" data-bs-parent="#servicesList">
+					<div id="strategy" class="accordion-collapse collapse" data-bs-parent="#servicesList">
 						<div class="accordion-body">
-							<p>Através de dados e entrevistas, compreendemos profundamente seu negócio, clientes e concorrência, para criar um plano de ações estratégicas que moldem experiências memoráveis com métricas bem definidas para moritonamento.</p>
-							<a href="/consultoria-pesquisa-e-estrategia.html" class="btn btn-sm btn-primary mb-3 mt-3" rel="tag">Saiba mais</a>
+							<p>Através de dados e entrevistas, compreendemos profundamente seu negócio, clientes e concorrência, para criar um
+								plano de ações estratégicas que moldem experiências memoráveis com métricas bem definidas para moritonamento.
+							</p>
+							<a href="/consultoria-pesquisa-e-estrategia.html" class="btn btn-sm btn-primary mb-3 mt-3" rel="tag">Saiba
+								mais</a>
 						</div>
 					</div>
 				</div>
@@ -165,11 +181,7 @@
 				Typebot.initBubble({
 					typebot: "floux-site",
 					apiHost: "https://chat.floux.digital",
-					previewMessage : {
-						message: "Tenho uma pergunta!",
-						autoShowDelay: 2000,
-						avatarUrl: "https://crm.floux.digital/assets/828c06f3-0948-4a03-b899-42177f32756e.png",
-					},
+					previewMessage : {},
 					theme: {
 						button: { backgroundColor: "#000000", iconColor: "#FFFFFF", size: "large" },
 						previewMessage: {

@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "test"
+    "build-css": "sass sass/styles.scss:main.css && node purifyCSS.js",
+    "watch-sass": "sass --watch sass/styles.scss:main.css --watch main.css:main.min.css"
   },
   "author": "floux",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.0"
+  },
+  "devDependencies": {
+    "purify-css": "^1.2.5"
   }
 }

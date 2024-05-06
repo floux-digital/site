@@ -1,5 +1,29 @@
 
 
+function lazyLoadImages() {
+  const images = document.querySelectorAll('img[data-src]');
+  
+  const options = {
+    threshold: 0.5
+  };
+  
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const lazyImage = entry.target;
+        lazyImage.src = lazyImage.dataset.src;
+        lazyImage.removeAttribute('data-src');
+        observer.unobserve(lazyImage);
+      }
+    });
+  }, options);
+  
+  images.forEach(image => {
+    imageObserver.observe(image);
+  });
+}
+
+
 function updateLabelAndPrice(rangeElement) {
 
     const rangeId = rangeElement.id;
@@ -34,7 +58,7 @@ function calculatePrice() {
     const hours = parseInt(document.getElementById('hours').value, 10);
 
     // Exemplo de cálculo de preço
-    const price = (users * 25) + (leads * 10) + (hours * 250);  // Altere esta fórmula conforme necessário
+    const price = (users * 50) + (leads * 5) + (hours * 220);  // Altere esta fórmula conforme necessário
 
     // Atualizar o elemento do preço
     document.getElementById('price-value').textContent = price;
@@ -43,6 +67,8 @@ function calculatePrice() {
 
 function initializePage() {
     
+    lazyLoadImages();
+
     updateLabelAndPrice(document.getElementById('users'));
     updateLabelAndPrice(document.getElementById('leads'));
     updateLabelAndPrice(document.getElementById('hours'));
