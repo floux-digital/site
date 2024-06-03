@@ -11966,7 +11966,7 @@ body {
 
 /* Style rules for dark mode */
 body.cream {
-  background-color: #ffebd5;
+  background-color: #fff9ed;
   padding-top: 104px;
 }
 body.cream h1, body.cream .h1, body.cream h2, body.cream .h2, body.cream h3, body.cream .h3, body.cream h4, body.cream .h4, body.cream h5, body.cream .h5 {
@@ -12164,7 +12164,7 @@ body.cream footer img {
 }
 
 .bg-cream {
-  background-color: #ffebd5;
+  background-color: #fff9ed;
 }
 
 .bg-contrast {
