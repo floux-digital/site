@@ -431,10 +431,13 @@ p{
 }
 
 .phone{
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 300;
   a{
     text-decoration: none;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 48px;
   }
   small{
     font-size: 12px;
