@@ -430,7 +430,49 @@ p{
   }
 }
 
+.phone{
+  font-size: 48px;
+  font-weight: 300;
+  a{
+    text-decoration: none;
+  }
+  small{
+    font-size: 12px;
+    display: block;
+  }
+}
 
+.email{
+  font-size: 26px;
+  font-weight: 300;
+  a{
+    text-decoration: none;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 32px;
+  }
+  small{
+    font-size: 12px;
+    display: block;
+  }
+}
+
+.whatsapp-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform .2s;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 16px;
+}
 
 footer{
   display: flex;
